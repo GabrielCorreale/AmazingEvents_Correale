@@ -32,7 +32,7 @@ footer {
 /* Tarjetas nuevas */
 
 .card{
-  width: 250px;
+  /* width: 250px; */
   margin: 20px;
   padding: 5px;
   border-radius: 6px;
