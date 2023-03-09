@@ -5,15 +5,19 @@
 }
 
 body {
+  width: 100%;
   height: 100vh;
-  
-}
+  font-family: sans-serif;
+
+  }
 
 
 main {
   display: flex;
+  justify-content: center;  
   flex-direction: column;
-  background-color:rgb(255, 255, 255);
+  flex-wrap: wrap;
+  background: url(https://cdn.pixabay.com/photo/2017/06/10/05/18/abstract-background-2389018_1280.jpg);
   min-height: 85vh;
 }
 
@@ -21,119 +25,32 @@ footer {
   min-height: 0vh;
 }
 
-
-.card {
-  border-radius: 8% !important;
-  background-color: rgb(180, 180, 180) !important;
-  /* display: flex; */
-  flex-direction: column;
-  flex-basis: 100%;
-  position: relative;
-  padding: 30px;
+#formulario{
+  background-color: aliceblue;
 }
 
-.card-img {
-  width: 180px;
-  height: 200px;
-  border-radius: 8%;
-  object-fit: cover;
-  /* object-position: 50% 20%; */
+/* Tarjetas nuevas */
+
+.card{
+  width: 250px;
+  margin: 20px;
+  padding: 5px;
+  border-radius: 6px;
+  overflow: hidden;
+  background-color: #fafafa;
+  box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+  cursor: default;
+  transition: all 400ms ease;
 }
 
-.card-h3 {
-  font-size: 1.5em;
-  font-weight: 700;
+.card:hover{
+  box-shadow: 5px 5px 20pc rgba(0,0,0,0.4)!important;
+  transform: translateY(-3%);
+}
+.card img{
+  border-radius: 6px;
 }
 
-.card-p {
-  font-size: 1em;
-  line-height: 1.7;
-  font-weight: 300;
-}
-
-
-
-
-/* RESPONSIVE QUERIES */
-
-@media (min-width: 320px) {
-  .card-h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-  }
-  .card-p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-  }
-  
-}
-
-@media (min-width: 460px) {
-  .card-h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-  }
-  .card-p {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-  }
-}
-
-@media (min-width: 640px) {
-  .card {
-    flex-basis: calc(60%);
-  }
-  .card-h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-  }
-}
-
-@media (min-width: 840px) {
-  .card-h3 {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
-  }
-  .card-p {
-    display: flex;
-    flex-direction: row;
-    justify-content: centereen;
-    align-items: start;
-  }
-}
-
-@media (min-width: 1024px) {
-  .card {
-    flex-basis: calc(33.3%);
-  }
-  .card-h3 {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: start;
-  }
-  .card-p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-  }
-}
-
-@media (min-width: 1100px) {
-  .card {
-    flex-basis: calc(15%);
-  }
+.card .contenido{
+  padding: 15px;
 }
